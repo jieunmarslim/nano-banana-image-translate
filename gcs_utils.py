@@ -46,7 +46,7 @@ def download_files_from_gcs(bucket_name: str, output_folder: str) -> list[str]:
 
 def upload_file_to_gcs(
     bucket_name: str, local_path: str, destination_blob_name: str = None
-):
+) -> None:
     """Upload a file to GCS.
 
     Args:
