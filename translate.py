@@ -25,8 +25,8 @@ def get_gemini_client(
         return genai.Client(vertexai=True)
 
 
-# Text model for language detection (defaults to gemini-2.0-flash if not set)
-GENERAL_LLM_MODEL_ID = os.getenv("GENERAL_LLM_MODEL_ID", "gemini-2.0-flash")
+# Text model for language detection
+GENERAL_LLM_MODEL = os.getenv("GENERAL_LLM_MODEL", "gemini-2.0-flash")
 
 
 def detect_language(client, file_content: bytes, mime_type: str = "image/jpeg") -> str:
@@ -56,7 +56,7 @@ def detect_language(client, file_content: bytes, mime_type: str = "image/jpeg") 
 
     try:
         response = client.models.generate_content(
-            model=GENERAL_LLM_MODEL_ID,
+            model=GENERAL_LLM_MODEL,
             contents=contents,
         )
 
