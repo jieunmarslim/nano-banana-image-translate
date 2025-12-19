@@ -1,6 +1,8 @@
 # Nano Banana Image Translate
 
 Translate product image text to other languages using Google Gemini. The source language is **automatically detected** using Gemini's text model.
+
+
 <img width="863" height="481" alt="image" src="https://github.com/user-attachments/assets/85d1b6c1-b3ad-431f-9524-7d093e6baccb" />
 <img width="857" height="470" alt="image" src="https://github.com/user-attachments/assets/359f4199-e1d6-4192-8fec-c45a52a5c944" />
 
