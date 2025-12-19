@@ -26,7 +26,7 @@ def get_gemini_client(
 
 
 # Text model for language detection
-GENERAL_LLM_MODEL = os.getenv("GENERAL_LLM_MODEL", "gemini-2.0-flash")
+GENERAL_LLM_MODEL = os.getenv("GENERAL_LLM_MODEL", "gemini-3-flash-preview")
 
 
 def detect_language(client, file_content: bytes, mime_type: str = "image/jpeg") -> str:
