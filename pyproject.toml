@@ -1,0 +1,13 @@
+[project]
+name = "nano-banana-image-translate"
+version = "0.1.0"
+description = "Translate product images using Gemini"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai",
+    "google-cloud-storage",
+    "google-api-python-client",
+    "google-auth",
+    "google-auth-httplib2",
+    "google-auth-oauthlib",
+]
