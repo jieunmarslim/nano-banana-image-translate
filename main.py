@@ -2,21 +2,18 @@
 
 import os
 from datetime import datetime
+import mimetypes
+
+from dotenv import load_dotenv
 
 from gcs_utils import download_files_from_gcs, upload_file_to_gcs
 from translate import get_gemini_client, translate_image, detect_language
-import mimetypes
 
 
 def load_env():
     """Load environment variables from .env file."""
-    if os.path.exists(".env"):
-        print("Loading .env file...")
-        with open(".env", "r") as f:
-            for line in f:
-                if line.strip() and not line.startswith("#") and "=" in line:
-                    key, value = line.strip().split("=", 1)
-                    os.environ[key] = value.strip('"').strip("'")
+    load_dotenv()
+    print("Loaded .env file.")
 
 
 def create_timestamped_folder() -> str:
