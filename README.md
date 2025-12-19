@@ -119,16 +119,12 @@ uv sync
 Create a `.env` file:
 
 ```bash
-# Required
+PROJECT_ID=your-project-id
+LOCATION=global
+GENERAL_LLM_MODEL=gemini-3-flash-preview
+IMAGE_MODEL=gemini-3-pro-image-preview
 GCS_BUCKET_NAME=your-image-bucket-name
-
-# Models
-IMAGE_MODEL_ID=gemini-2.0-flash-preview-image-generation  # For image translation
-TEXT_MODEL_ID=gemini-2.0-flash                            # For language detection (optional)
-
-# Optional
-TRANSLATE_LANGUAGE=English      # Target language (default: English)
-AI_STUDIO_API_KEY=your-api-key  # Uses Vertex AI if not provided
+IMAGE_RESOLUTION=2K
 ```
 
 ## 5. Usage

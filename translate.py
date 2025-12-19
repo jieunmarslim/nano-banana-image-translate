@@ -124,7 +124,7 @@ def translate_image(
 
     try:
         response_stream = client.models.generate_content_stream(
-            model=model_id or os.getenv("IMAGE_MODEL_ID"),
+            model=model_id or os.getenv("IMAGE_MODEL"),
             contents=contents,
             config=generate_content_config,
         )
