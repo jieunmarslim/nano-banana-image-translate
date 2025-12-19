@@ -9,7 +9,7 @@ from prompt import get_prompt
 
 
 def get_gemini_client(
-    api_key: str = None, project_id: str = None, location: str = None
+    api_key: str = None
 ) -> genai.Client:
     """Get Gemini client (API key or Vertex AI).
 
