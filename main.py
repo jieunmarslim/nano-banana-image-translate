@@ -12,8 +12,8 @@ from translate import get_gemini_client, translate_image, detect_language
 
 def load_env():
     """Load environment variables from .env file."""
-    load_dotenv()
-    print("Loaded .env file.")
+    if load_dotenv():
+        print("Loaded .env file.")
 
 
 def create_timestamped_folder() -> str:
